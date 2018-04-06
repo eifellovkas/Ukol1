@@ -42,9 +42,5 @@ public class Hra {
     	Random nahodneSlovo = new Random();
     	hadane = slovicka.get(nahodneSlovo.nextInt(slovicka.size())).getNazevEn();
     }
-    
-    public String getHadane() {
-    	return hadane;
-    }
 
 }
