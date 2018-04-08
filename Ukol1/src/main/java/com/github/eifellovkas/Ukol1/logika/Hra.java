@@ -64,7 +64,7 @@ public class Hra {
     	}
     }
     
-    public void setSkore(String slovo) {
+    public void setScore(String slovo) {
     	if (trefa(slovo))  {
     		dobre = dobre + 1;
     	}

@@ -17,9 +17,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
 
-public class Controller extends GridPane {
+
+public class Controller {
 	private Map<String, Slovo> tlacitka;
 	private Hra hra;
 	private List<Slovo> slovicka;
@@ -110,7 +110,7 @@ public void inicializuj(Hra hra, Start start) {
 			String hadane = ((Node) arg0.getTarget()).getId();
 			hadane = tlacitka.get(hadane).getNazevEn();
 			if (hadej.getText().equals(hadane)) {
-				hra.setSkore(hadane);
+				hra.setScore(hadane);
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Výsledek hádání");
 				alert.setHeaderText(null);
@@ -119,7 +119,7 @@ public void inicializuj(Hra hra, Start start) {
 			}
 			else 
 			{	
-				hra.setSkore(hadane);
+				hra.setScore(hadane);
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Výsledek hádání");
 				alert.setHeaderText("Hádané slovo je špatně");
