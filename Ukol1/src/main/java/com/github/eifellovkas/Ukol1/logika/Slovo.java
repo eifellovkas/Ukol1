@@ -3,12 +3,12 @@ package com.github.eifellovkas.Ukol1.logika;
 public class Slovo {
 	private String nazevEn; 
 	private String nazevCz;
-	private String obr;
+	private String URL;
 	
-	public Slovo(String nazevEn, String nazevCz, String obr){
+	public Slovo(String nazevEn, String nazevCz, String URL){
 		this.nazevEn = nazevEn;
 		this.nazevCz = nazevCz;
-		this.obr = obr;
+		this.URL = URL;
 	}
 	
 	public String getNazevEn() {
@@ -19,7 +19,7 @@ public class Slovo {
 		return nazevCz;
 	}
 	
-	public String getObr() {
-		return obr;
+	public String getURL() {
+		return this.URL;
 	}
 }

@@ -17,9 +17,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 
-
-public class Controller {
+public class Controller extends GridPane {
 	private Map<String, Slovo> tlacitka;
 	private Hra hra;
 	private List<Slovo> slovicka;
@@ -60,37 +60,37 @@ public void inicializuj(Hra hra, Start start) {
 	slovicka = hra.getSlovicka();
 	
 	tlacitka.put(button1.getId(), slovicka.get(0));
-	String URL = slovicka.get(0).getObr();
+	String URL = slovicka.get(0).getURL();
 	Image obr = new Image (getClass().getResourceAsStream(URL));
 	obr1.setImage(obr);
 	tooltip1.setText(tlacitka.get("button1").getNazevCz());
 	
 	tlacitka.put(button2.getId(), slovicka.get(1));
-	URL = slovicka.get(1).getObr();
+	URL = slovicka.get(1).getURL();
 	obr = new Image (getClass().getResourceAsStream(URL));
 	obr2.setImage(obr);
 	tooltip2.setText(tlacitka.get("button2").getNazevCz());
 	
 	tlacitka.put(button3.getId(), slovicka.get(2));
-	URL = slovicka.get(2).getObr();
+	URL = slovicka.get(2).getURL();
 	obr = new Image (getClass().getResourceAsStream(URL));
 	obr3.setImage(obr);
 	tooltip3.setText(tlacitka.get("button3").getNazevCz());
 	
 	tlacitka.put(button4.getId(), slovicka.get(3));
-	URL = slovicka.get(3).getObr();
+	URL = slovicka.get(3).getURL();
 	obr = new Image (getClass().getResourceAsStream(URL));
 	obr4.setImage(obr);
 	tooltip4.setText(tlacitka.get("button4").getNazevCz());
 	
 	tlacitka.put(button5.getId(), slovicka.get(4));
-	URL = slovicka.get(4).getObr();
+	URL = slovicka.get(4).getURL();
 	obr = new Image (getClass().getResourceAsStream(URL));
 	obr5.setImage(obr);
 	tooltip5.setText(tlacitka.get("button5").getNazevCz());
 	
 	tlacitka.put(button6.getId(), slovicka.get(5));
-	URL = slovicka.get(5).getObr();
+	URL = slovicka.get(5).getURL();
 	obr = new Image (getClass().getResourceAsStream(URL));
 	obr6.setImage(obr);
 	tooltip6.setText(tlacitka.get("button6").getNazevCz());
@@ -110,19 +110,19 @@ public void inicializuj(Hra hra, Start start) {
 			String hadane = ((Node) arg0.getTarget()).getId();
 			hadane = tlacitka.get(hadane).getNazevEn();
 			if (hadej.getText().equals(hadane)) {
-				hra.setScore(hadane);
+				hra.setSkore(hadane);
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Výsledek hádání");
 				alert.setHeaderText(null);
-				alert.setContentText("Hádané slovo je správné");
+				alert.setContentText("Správně!");
 				alert.showAndWait();
 			}
 			else 
 			{	
-				hra.setScore(hadane);
+				hra.setSkore(hadane);
 				Alert alert = new Alert(AlertType.INFORMATION);
-				alert.setTitle("Výsledek hádání");
-				alert.setHeaderText("Hádané slovo je špatně");
+				alert.setTitle("Výsledek");
+				alert.setHeaderText("Špatně!");
 				alert.showAndWait();
 			}
 		hadani = false;

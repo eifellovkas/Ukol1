@@ -16,17 +16,17 @@ public class Hra {
 	
 	public Hra() {
 		slovicka = new ArrayList<Slovo>();
-		Slovo bull = new Slovo("bull", "býk", "/ui/bull.png");
+		Slovo bull = new Slovo("bull", "býk", "/com/github/eifellovkas/ui/bull.png");
 		slovicka.add(bull);
-		Slovo elephant = new Slovo("elephant", "slon", "/ui/elephant.png");
+		Slovo elephant = new Slovo("elephant", "slon", "/com/github/eifellovkas/ui/elephant.png");
 		slovicka.add(elephant);
-		Slovo dog = new Slovo("dog", "pes", "/ui/dog.png");
+		Slovo dog = new Slovo("dog", "pes", "/com/github/eifellovkas/ui/dog.png");
 		slovicka.add(dog);
-		Slovo owl = new Slovo("owl", "sova", "/ui/owl.png");
+		Slovo owl = new Slovo("owl", "sova", "/com/github/eifellovkas/ui/owl.jpg");
 		slovicka.add(owl);
-		Slovo fox = new Slovo("fox", "liška", "/ui/fox.png");
+		Slovo fox = new Slovo("fox", "liška", "/com/github/eifellovkas/ui/fox.png");
 		slovicka.add(fox);
-		Slovo pig = new Slovo("pig", "prasátko", "/ui/pig.png");
+		Slovo pig = new Slovo("pig", "prasátko", "/com/github/eifellovkas/ui/pig.png");
 		slovicka.add(pig);
 		
 		
@@ -64,7 +64,7 @@ public class Hra {
     	}
     }
     
-    public void setScore(String slovo) {
+    public void setSkore(String slovo) {
     	if (trefa(slovo))  {
     		dobre = dobre + 1;
     	}
